@@ -3,7 +3,7 @@ module Mutations
     argument :attributes, Types::VolunteerInputType, required: true
 
     field :volunteer, Types::VolunteerType, null: true
-    field :errors, [String], null: false
+    field :errors, String, null: false
 
     def resolve(attributes:)
       formatted_date_joined = attributes[:date_joined]
@@ -21,7 +21,7 @@ module Mutations
       if volunteer.save
         {
           volunteer: volunteer,
-          errors: [],
+          errors: []
         }
       else
         {
