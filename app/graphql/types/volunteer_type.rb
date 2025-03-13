@@ -5,6 +5,7 @@ module Types
     field :last_name, String, null: false
     field :age, Integer, null: true
     field :email, String, null: false
+    field :role, String, null: false
     field :phone, String, null: true
     field :date_joined, GraphQL::Types::ISO8601Date, null: false
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
